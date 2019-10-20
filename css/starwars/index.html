@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>星球大战</title>
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+        } */
+        body{
+            background: url(./images/bg.jpg);
+        }
+        .starwars-demo{
+            position:absolute;
+            top:50%;
+            left: 50%;
+            width: 17em;
+            height: 34em;
+            
+            transform: translate(-50%,-50%);   /*自身向左和上移动*/
+            perspective: 800px;
+             transform-style: preserve-3d;/*3d效果*/ 
+        }
+        .star,.wars{
+            position:absolute;
+            animation: star 10s ease-out infinite;
+        }
+        .star{
+            top: -0.075em;
+            /*animation: star 10s ease-out infinite;*/
+        }
+        @keyframes star{
+            /* 0%代表一开始*/
+            0%{
+                opacity: 0;
+                transform: scale(1.5); /*变形1.5倍*/
+            }
+            20%{
+                opacity: 1;
+
+            }
+            89%{
+                opacity: 1;
+                transform: scale(1);
+            }
+            100%{
+                opacity: 1;
+                transform: translateZ(-400em); /*Z代表xyz坐标*/
+                
+            }
+        }
+        .wars{
+            bottom: -0.5em;
+           /* animation:star 10s ease-out;*/
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <div class="starwars-domo">
+        <img src="" alt="" class="star">
+        <img src="" alt="" class="wars">
+    </div> -->
+    <!-- <div class="starwars-demo">
+        <img src="./image/star.svg" alt="" class="star">
+        <img src="./image/star.svg" alt="" class="wars">
+    </div> -->
+    <div class="starwars-demo">
+        <img src="./images/star.svg" alt="" class="star">
+        <img src="./images/wars.svg" alt="" class="wars">
+        <h2 class="byline">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </h2>
+    </div>
+    
+</body>
+</html>

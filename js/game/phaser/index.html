@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/phaser/2.6.2/phaser.min.js"></script>
+</head>
+<body>
+    <div id="game"></div>
+    <!-- <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul> -->
+    <script>
+        // 游戏框的大小
+        const width = window.innerWidth , height = window.innerHeight; //const 定义的值无法 被改变
+        //Phaser 游戏框架提供Game对象
+        const game = new Phaser.Game(width, height, Phaser.Auto, '#game', {
+            preload: preload,
+            create: create,
+            update:update
+        })
+        let back,  //背景
+        mummy,      //精灵
+        anim,   //运动
+        loopText;
+
+        //预加载资源 游戏的通用
+        function preload(){
+            //back = game.add.image(0,-400,'')
+            game.load.image('lazur','./thorn_lazur.png');
+            game.load.spritesheet('mummy', './metalslug_mummy37x45.png', 37, 45, 18/*帧数*/)
+
+        }
+        //创建什么样的场景
+        function create(){
+            back = game.add.image(0, -400/* y轴*/, 'lazur');
+            back.scale.set(2); //背景变形两倍
+            back.smoothed = false;
+            
+            mummy = game.add.sprite(200, 360, 'mummy', 10)  //x , y , 名称 ，频率 10s/次
+            mummy.scale.set(2);
+            mummy.smoothed = false;
+            anim = mummy.animations.add('walk');  //动画效果
+            anim.play(10, true);  // 100是动作的频率
+
+            
+
+
+        }
+        //更新
+        function update(){
+           back.x -= 0.5;
+           
+
+        }
+
+
+
+        // const height = 600;  const可以同时定义多个
+        //width = 900;
+        // const mrRinht = { //JSON 对象表达式
+        //     name: '王志浩',
+        //     age: 18
+        // }
+        // mrRinght.age = 19;  //可以改变单个的值
+        // mrRinght = 200; //无法改变整体
+        // {//代表代码块
+        //     var a = 1;
+        //     //var 块级作用域, 没用 js 定义变量, 一定会找到相应的作用域再定义scope
+        // }
+        // a++;
+        const items = document.querySelectorAll('ul>li');
+        //同步的
+        for(/*var */ let i = 0; i < items.length; i++){  //用let时 下面的i就为10个，不是只有一个 1 = 10
+            //事件是异步的 下面打印出的i全为10
+            items[i].addEventListener('click', function(){
+                // 点击时才会发生
+                alert(i+1);  //最后的i 定义在window上的
+            });
+        }
+    </script>
+    <audio src="背景音乐 - 植物大战僵尸.mp3"  autoplay  loop  ></audio>
+</body>
+</html>

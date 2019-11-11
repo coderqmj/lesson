@@ -1,7 +1,7 @@
 // 数组去重
 /**
  * 
- * @param {Array} arr 
+ * @param {Array} a rr
  * @return{Array}
  */
 // function unique(arr){    es5
@@ -44,4 +44,4 @@ const unique = (arr) =>{
 
 var arr = ['1',2,3,2,4,1];
 console.log(unique(arr));
-console.log(typeof unique == 'function' && unique(arr) )
+// console.log(typeof unique == 'function' && unique(arr) )

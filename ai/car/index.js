@@ -1,12 +1,14 @@
 //fs=filesystem
 const fs = require('fs'); //读取文件  fs是node内置模块
 //分类客户端
-const AipImageClassifyClient = require("baidu-aip-sdk").imageClassify;
+const AipImageClassifyClient = require("baidu-aip-sdk").imageClassify;  //图片识别
 
 //同步
-const image = fs.readFileSync('./car.jpg').toString("base64");
+const image = fs.readFileSync('./bsj.png').toString("base64");
 //console.log(image);
 const client = new AipImageClassifyClient('17711745', '2OxU4eGCDB5lhyFYWe1whPVA', 'RhDvKOe2jpiB1b2uryWKMjtbtnuIgzaZ');
+
+//const client = new AipImageClassifyClient('17711745', '2OxU4eGCDB5lhyFYWe1whPVA', 'RhDvKOe2jpiB1b2uryWKMjtbtnuIgzaZ');
 
 client
     .carDetect(image)

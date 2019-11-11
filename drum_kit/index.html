@@ -100,13 +100,15 @@
             <span class="sound">tink</span>
         </div>
     </div>
-    <audio src="./sounds/clap.wav" controls="controls" autoplay="autoplay" />
+    <audio src="./sounds/boom.wav"  autoplay="autoplay"  ></audio>
+    <audio src="./sounds/clap.wav"  autoplay="autoplay"  ></audio>
+    
     <script>
         // 返回所有元素数组
         // const key=document.querySelectorAll('.key');
         const key=document.querySelector('.key');
         const audio = document.querySelector('audio');
-        audio.play();
+        //audio.play();
         // 打印函数
         //console.log(key);
         // 给key添加一个类
@@ -116,6 +118,8 @@
         // }，3000)
         function playSound(){
             key.classList.add('playing');
+            // audio.play();
+            audio.play();
         }
         window.addEventListener('keydown',playSound);
     </script>

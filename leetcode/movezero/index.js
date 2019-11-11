@@ -32,10 +32,13 @@ var moveZeroes = function (nums) {
         // index++;
       }
       //0 length-index
-    }
+     }
     for (var i = index; i < nums.length; i++) {
       nums[index++] = 0;
     }
   
   }
-  
+
+const nums = [0,1,0,3,17];
+moveZeroes(nums);
+console.log(nums);

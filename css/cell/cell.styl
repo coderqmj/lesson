@@ -1,0 +1,39 @@
+*
+    margin: 0
+    padding: 0
+
+.weui-cell
+    padding 16px 
+    position relative
+    display flex
+    align-items center
+    &::after
+        content: ""
+        position absolute
+        bottom 0
+        left 0
+        right 0
+        height 1px
+        border-bottom 1px soild rgba(0,0,0,1)
+        transform scaleY(0.5); //高度缩小一半
+        transform-origin 0 100%;      //以哪个点为基点
+    &::before
+        content: ""
+        position absolute
+        bottom 0
+        left 0
+        right 0
+        height 1px
+        border-bottom 1px soild rgba(0,0,0,1)
+        transform scaleY(0.5); //高度缩小一半
+        transform-origin 0 100%;      //以哪个点为基点
+    .weui-cell__hd
+        img 
+            width 20px
+            margin-right 16
+            display block
+    .weui-cell_hd
+        flex 1
+    .weui-cell_ft
+        text-align right
+        color rgba(0,0,0,.5)

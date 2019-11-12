@@ -25,7 +25,7 @@ def get_json(url):
         pass
 
 def download(url,path):
-    start = time.time() # 开始时间
+    #start = time.time() # 开始时间
     size = 0
     headers = {
         'User-Agent': 

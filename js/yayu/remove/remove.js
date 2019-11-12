@@ -37,6 +37,6 @@ for(var i = 0 ;i<1000000;i++){
 }
 console.time('test');
 remove(arr);
-// console.log(remove(arr));
+console.log(remove(arr));
 console.timeEnd('test');
 

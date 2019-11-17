@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+            
+    </div>
+    <script>
+        // root 望月归来不看山，看华山
+        //文字设置成红色
+    //     var root=document.getElementById("root");
+
+    //     //以下代码可以合并
+    //     root.innerText='望月归来不看山，看华山'; 
+    //     root.style.color= 'red';
+
+    // $函数名
+    function $(cssSelector){
+        return document.querySelector(cssSelector);
+    }
+
+// 1.tetx 可以设置innertext
+// 2.text 支持链式， return 节点
+function text(str,el){
+    el.innerText = str;
+    return el;
+}
+function css(type,val,el){
+    el.style[type] = val;
+     return el;
+}
+        css('color','red' ,text('看花山',$('#root')));
+        // .innerText = '看花山'
+        // .style.sclor = 'red';
+    
+    </script>
+</body>
+</html>

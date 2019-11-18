@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.start{
+    overflow: hidden;
+    margin: 100px 0 0 200px;
+    background-color: red;
+    display: inline-block;
+    /* display: block; */
+}
+.start li{
+    width: 147px;
+    height: 130px;
+    /* 布局靠左边浮动 */
+    float: left; 
+    background-image: url(../img/star.png);
+    background-position: right bottom;
+}
+.start li.active{
+    background-image: url(../img/star.png);
+    background-position: left bottom;
+}

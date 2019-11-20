@@ -9,4 +9,5 @@
     Number.prototype.add=add; //将add函数加到Number原型
     Number.prototype.minus=minus;
 }();
-console.log((5).add(3).minus(2)) //链式写法
+console.log((5).add(3).minus(2)) //!链式写法
+

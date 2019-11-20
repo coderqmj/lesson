@@ -6,7 +6,7 @@
 .start{
     overflow: hidden;
     margin: 100px 0 0 200px;
-    background-color: red;
+    /* background-color: red; */
     display: inline-block;
     /* display: block; */
 }

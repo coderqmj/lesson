@@ -29,7 +29,19 @@
         // canvas.style.height = '50vh'; 
         // canvas.height = window.innerHeight;
         // canvas.width = window.innerWidth;    //取得窗口宽度;
-        var dis = 0;
+         var dis = 0;
+        // let interval = setInterval(()=>{
+        //         clearInterval(interval);
+        //         var ctx = canvas.getContext('2d');
+        //         ctx.fillStyle = 'red';
+        //         // ctx.font="50px Verdana";
+        //         ctx.clearRect(0,0,500,200);
+        //         ctx.fillText(++dis,250,100);
+        //         //animation();
+        //         interval();
+            
+        // },1000)
+        // interval();
         function animation(){
             requestAnimationFrame(function(){
                     
@@ -39,7 +51,7 @@
                     ctx.clearRect(0,0,500,200);
                     ctx.fillText(++dis,250,100);
                     animation();
-            })
+            },1)
             
         }
         animation();

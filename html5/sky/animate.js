@@ -9,7 +9,7 @@
 
 //各个页面id名字不一样 不适格复用
 //改善:
-var Animation = function(els){ //els 为参数
+var Animation = function(pots){ //els 为参数
     var dur = 0.3,
     amount = '55%',
     tl = new TimelineMax({
@@ -18,9 +18,9 @@ var Animation = function(els){ //els 为参数
         repeatDelay: 1
     });
     tl
-    .add(fromLeft([
-        els[0],els[2]
-    ]))
+    .add(fromLeft(
+        pots.leftAnimated
+    ))
     .add(fromRight(els[1]))
 
     function fromLeft(el){

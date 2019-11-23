@@ -13,11 +13,30 @@
         <div id="box1" class="box"></div>
         <div id="box2" class="box"></div>
         <div id="box3" class="box"></div>
+        <div class="box" id="box4"></div>
+        <div class="box" id="box5"></div>
+        <div class="box" id="box6"></div>
+        <div class="box" id="box7"></div>
     </div>
+    
 
 </body>
+
 <script src="./animate.js"></script>
 <script>
-    new Animation(['#box1','#box2','#box3'])
+    //第四个元素 和第二个一样动
+    // var divs = document.getElementsByTagName('div');
+    // console.log(divs)
+    var skyObj={
+        leftAnimated: ['#box1','#box3'
+
+        ],
+        leftAnimated: ['#box2','#box4'
+
+        ]
+
+    }
+    // new Animation(['#box1','#box2','#box3'])
+    new Animation(skyObj)
 </script>
 </html>

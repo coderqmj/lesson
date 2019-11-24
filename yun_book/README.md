@@ -1,0 +1,6 @@
+-   图书馆管理小程序
+-   选框架
+    - weui vant(有赞)
+-   小程序安装 vant ：npm i vant-weapp -S --production
+-   二维码：信息的加密 isbn url 公众账号
+-   isbn之后怎么拿到图书的信息

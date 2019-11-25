@@ -1,0 +1,17 @@
+{
+  "name": "nosql",
+  "version": "1.0.0",
+  "description": "-   NOSQL\r -   MySQL是关系数据库 database->table->fields\r -   NOSQL\r     -   无需写sql\r     -   json object{} .save()\r     -   find({})\r     -   适用于碎片化，结构不是很良好的数据存储\r -   Mongodb 云开发数据库就是线上版的",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.4"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "redis": "^2.8.0"
+  },
+  "name": "lol",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}

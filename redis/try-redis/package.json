@@ -1,0 +1,15 @@
+{
+  "name": "try-redis",
+  "version": "1.0.0",
+  "description": "-   Mysql关系型     Mongodb NOSQL    \r -   redis 内存KV\r     -   1.解决数据库的压力\r     -   2.k:v 保存在redis 内存中",
+  "main": "inde.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "redis": "^2.8.0"
+  }
+}

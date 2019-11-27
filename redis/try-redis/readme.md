@@ -1,0 +1,11 @@
+-   Mysql关系型     Mongodb NOSQL    
+-   redis 内存KV
+    -   1.解决数据库的压力
+    -   2.k:v 保存在redis 内存中
+-   聚合数据 20 设计API有限次数调用
+-   状态码 res.writeHead(200,{...})
+    -   1.1xx的请求进行中..
+    -   2.2xx成功
+    -   3.3xx跳转(登陆成功之后跳到首页)
+    -   4.4xx用户端发生错误(404 NOT FOUND)
+    -   5.5xx服务器

@@ -1,0 +1,16 @@
+<!--pages/shouye/shouye.wxml-->
+<import src="../components/news/news.wxml"></import>
+<!-- 首页的轮播图 -->
+<view class='sousuo' bindtap='bindSearchBook' >
+  <image src='/images/shouye/sousuo.png'></image>
+</view>
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="img">
+  <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}" >
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class='templateNews'>
+  <template is="theNews" data="{{msgList}}"></template>
+</view>

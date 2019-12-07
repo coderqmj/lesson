@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/shouye/shouye",
+    "pages/shoppingCart/shoppingCart",
+    "pages/post/post",
+    "pages/order/order",
+    "pages/my/my"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FF69B4",
+    "backgroundTextStyle": "dark",
+    "navigationBarTitleText": "东理二手交易",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/shouye/shouye",
+        "iconPath": "images/tabBar/shouye.png",
+        "selectedIconPath": "images/tabBar/shouye.png"
+      },
+      {
+        "text": "购物车",
+        "pagePath": "pages/shoppingCart/shoppingCart",
+        "iconPath": "images/tabBar/shoppingCart.png",
+        "selectedIconPath": "images/tabBar/shoppingCart.png"
+      },
+      {
+        "text": "发布",
+        "pagePath": "pages/post/post",
+        "iconPath": "images/tabBar/release.png",
+        "selectedIconPath": "images/tabBar/release.png"
+      },
+      {
+        "text": "订单",
+        "pagePath": "pages/order/order",
+        "iconPath": "images/tabBar/order.png",
+        "selectedIconPath": "images/tabBar/order.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/my/my",
+        "iconPath": "images/tabBar/mine.png",
+        "selectedIconPath": "images/tabBar/mine.png"
+      }
+    ],
+    "color": "#000000",
+    "selectedColor": "#1E68C9"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

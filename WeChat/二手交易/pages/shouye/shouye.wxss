@@ -1,0 +1,13 @@
+/* pages/shouye/shouye.wxss */
+@import '../components/news/news.wxss';
+.slide-image{
+  width: 100%
+}
+.sousuo {
+  height: 120rpx;
+  width: 100%;
+}
+.sousuo image{
+  width: 100%;
+  height: 100%;
+}

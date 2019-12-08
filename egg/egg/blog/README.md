@@ -1,0 +1,4 @@
+-   直接生成一个项目模板
+    -   npm i egg-init -g
+    -   egg-init blog --type=simple blog是项目名字
+-   egg-init 初始化一个项目

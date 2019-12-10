@@ -1,0 +1,9 @@
+-   样式设置的三种方式
+    -   1.行内(内联)<view style="color:red; font-size:32px">哈哈哈</view> 分号隔开
+    -   2.业内样式 在页面的wxss设置
+    -   3.全局样式 在app.wxss中设置
+    -   优先级：行内>业内>全局
+    -   语句后面加 !important 优先级会变得无穷大
+-   rpx(responsive pixel) 根据屏幕自适应 规定为750rpx
+    -   iPhone 6 中 1px = 2rpx
+-   @import './style/box1.wxss'  导入样式 

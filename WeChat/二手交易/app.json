@@ -18,31 +18,31 @@
       {
         "text": "首页",
         "pagePath": "pages/shouye/shouye",
-        "iconPath": "images/tabBar/shouye.png",
-        "selectedIconPath": "images/tabBar/shouye.png"
+        "iconPath": "images/tabBar/首页.png",
+        "selectedIconPath": "images/tabBar/首页1.png"
       },
       {
         "text": "购物车",
         "pagePath": "pages/shoppingCart/shoppingCart",
         "iconPath": "images/tabBar/shoppingCart.png",
-        "selectedIconPath": "images/tabBar/shoppingCart.png"
+        "selectedIconPath": "images/tabBar/购物车满.png"
       },
       {
         "text": "发布",
         "pagePath": "pages/post/post",
-        "iconPath": "images/tabBar/release.png",
+        "iconPath": "images/tabBar/发布.png",
         "selectedIconPath": "images/tabBar/release.png"
       },
       {
         "text": "订单",
         "pagePath": "pages/order/order",
         "iconPath": "images/tabBar/order.png",
-        "selectedIconPath": "images/tabBar/order.png"
+        "selectedIconPath": "images/tabBar/订单.png"
       },
       {
         "text": "我的",
         "pagePath": "pages/my/my",
-        "iconPath": "images/tabBar/mine.png",
+        "iconPath": "images/tabBar/我的.png",
         "selectedIconPath": "images/tabBar/mine.png"
       }
     ],

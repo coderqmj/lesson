@@ -1,0 +1,15 @@
+<input />
+<!-- 2.value:文本的默认值  -->
+<input value="吃了吗？" />
+
+<!-- 3.type:决定键盘输入的类型 -->
+<input type="number" />
+
+<!-- 4.password:加密 -->
+<input password />
+
+<!-- 5.place-holder 站位文字 -->
+<input placeholder="请输入文字" />
+
+<!-- 6.input 绑定事件 -->
+<input />

@@ -7,3 +7,7 @@
 -   rpx(responsive pixel) 根据屏幕自适应 规定为750rpx
     -   iPhone 6 中 1px = 2rpx
 -   @import './style/box1.wxss'  导入样式 
+-   {{age>=18> '成年人': '未成年人'}}
+-   hidden隐藏组件知识隐藏，但依然存在 dispay:none
+-   wx.if() 将组件消失 压根就没有创建 
+-   wx:for"{{}}" 会自动生成item 和 index

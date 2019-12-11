@@ -1,0 +1,12 @@
+<button bindtap='handleSwitchColor' size="mini">按钮</button>
+<view class='box {{isActive? "active" : ""}}' >吃了吗？</view>
+<view>{{nowDate}}</view>
+<map class="map" longitude="115.27" latitude="28.20"></map>
+<view>------------分割线-----------</view>
+<button bindtap="handleIncrement">分数递增6</button>
+<view wx:if="{{score>=90}}">优秀{{score}}</view>
+<view wx:elif="{{score>=80}}">良好{{score}}</view>
+<view wx:elif="{{score>=60}}">及格{{score}}</view>
+<view wx:else>不及格{{score}}</view>
+<!-- <view wx:for="邱模建">{{item}} {{index}}</view> -->
+<view wx:for="{{movies}}" wx:for-item="movie" wx:for-index="i">{{movie}} {{i}}</view>

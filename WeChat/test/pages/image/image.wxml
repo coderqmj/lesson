@@ -1,0 +1,13 @@
+<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574940972572&di=4f44afa43b03747092411c16eb57538f&imgtype=0&src=http%3A%2F%2Fhbimg.huabanimg.com%2F6201bb2f6027cd14214d14219d419aaf1f30b8fcbcda-cHHgmX_fw658' class='image' />  
+<button bindtap='handleChooseAlbum'>上传图片</button>
+<image src='{{imagePath}}' />
+<view>===================================</view>
+<image wx:for="{{1}}" 
+       src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574940972572&di=4f44afa43b03747092411c16eb57538f&imgtype=0&src=http%3A%2F%2Fhbimg.huabanimg.com%2F6201bb2f6027cd14214d14219d419aaf1f30b8fcbcda-cHHgmX_fw658' 
+       class='image' 
+       lazy-load
+       bindload='handleImageLoad' />
+<!-- show-menu-by-longpress 长按图片识别小程序码 -->
+<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574940972572&di=4f44afa43b03747092411c16eb57538f&imgtype=0&src=http%3A%2F%2Fhbimg.huabanimg.com%2F6201bb2f6027cd14214d14219d419aaf1f30b8fcbcda-cHHgmX_fw658' 
+       class='image'
+       show-menu-by-longpress />  

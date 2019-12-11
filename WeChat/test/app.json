@@ -1,0 +1,10 @@
+{
+  "pages": [
+    "pages/Mustache/Mustache",
+    "pages/wxss/wxss",
+    "pages/scroll-view/scroll-view",
+    "pages/input/input",
+    "pages/image/image"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>饿了么商家</title>
+    <link rel="stylesheet" href="./comm.css">
+</head>
+<body>
+    <div id="root">
+         <!-- 头部 -->
+       <div class="header">
+           <div class="content-wrapper">
+               <div class="avatar">
+                   <!-- :src动态绑定 -->
+                  <img width="64" height="64" :src="seller.avatar" alt="" id="avatar"> 
+               </div>
+           </div>
+       </div>
+       <!-- <div>{{message}}</div> -->
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        //引入VUE new 一下 页面就跟dom api say byebye
+        new Vue({
+            el:'#root',    //先编译再输出
+           data:{
+               seller:{}
+           },
+           //页面显示后 类似于onload 生命周期函数
+           mounted(){
+            //    setTimeout(()=>{
+            //     this.avatar='https://img.36krcdn.com/20191215/v2_f2b476f433c14272a70dbfcd543b0b5c_img_png'
+            //    },2000)
+               fetch('http://localhost:3000/data')
+                .then(data =>data.json())
+                .then(data =>{  
+                    this.seller = data;
+                    //小程序则是 this.setData({})
+            // console.log(data);
+            // document.getElementById('avatar').src=data.avatar
+            
+        })
+
+           }
+        })
+        //等着数据来喂饱
+       
+    </script>
+</body>
+<html>

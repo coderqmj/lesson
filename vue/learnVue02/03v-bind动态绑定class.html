@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- boolean 放在data里  对象语法-->
+       <h1 v-bind:class="{类名1: boolean,类名: boolean}">{{message}}</h1> 
+       <h2 :style{属性名:属性值}>{{message}}</h2>
+       <!--  -->
+       <h1 v-bind:class="函数名()">{{message}}</h1>
+       <!-- 数组语法 不用加单引号 是从data中取的，加单引号就是类名-->
+       <h1 v-bind:class="[active,line]"></h1> 
+</body>
+<script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+<script src='./index.js'></script>
+</html>

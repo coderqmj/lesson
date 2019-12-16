@@ -3,6 +3,32 @@
     "editor.accessibilitySupport": "on",
     "vetur.format.defaultFormatter.html": "js-beautify-html",
     "emmet.syntaxProfiles": {"vue-html":"html","vue":"html"
-    }
+    },
+    // 想要设置为背景图片的路径，最多三张，举个栗子：
+"background.customImages": ["file:///D:/图片/timg.jfif", "file:///C:/Users/25226/OneDrive/图片/壁纸/50b3495fbe4cd84a0f1cb2137ac2431f.gif", "file:///C:/Users/25226/OneDrive/图片/壁纸/50b3495fbe4cd84a0f1cb2137ac2431f.gif"],
+
+// Plugin background enabled.background 插件是否启用
+"background.enabled": false,
+
+// Custom common style.自定义各项公有样式.
+"background.style": {
+    "content": "''",
+    "pointer-events": "none",
+    "position": "absolute",
+    "right": "0",
+    "z-index": "99999",
+    "width": "100%",
+    "height": "100%",
+    // "background-position": "10% 50%",
+    "background-position": "100% 60%",
+    "background-repeat": "no-repeat",
+    "opacity": 0.2,
+    "background-attachment": "fixed",
+    "background-size":"100%",
+},
+
+// Use default images.使用默认图片
+"background.useDefault": false,
+
     
 }

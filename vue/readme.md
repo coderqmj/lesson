@@ -24,3 +24,4 @@ function 快捷键
     取名一般不写动词，写属性
     get function 一般是返回值
     一般没有set方法 ,只读属性
+    computed比methods性能好 会放入内存中 数据修改? 调用:不调用 而methods内次都会调用函数

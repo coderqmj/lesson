@@ -34,3 +34,4 @@ function 快捷键
   unshift 加到最前面
   shift 加到最后面
   splice() 删除:第一个参数表第几个开始,第二个参数代表删除几个元素/插入/替换 splice(1,3,)
+- 过滤器 filters 在这里面写个函数修正小数点保留问题 {{item.price | showPrice}}

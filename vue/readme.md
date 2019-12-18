@@ -19,9 +19,18 @@ function 快捷键
   属性名: 属性值 不加引号代表是 data 取出的，加‘’代表是他的值
 - 监听事件
   v-on:click="函数名"
-- 计算属性 
-    在computed中定义函数  getFullName: fucntion(){} 和methods中不同的是调用不用加()直接写 getFullName
-    取名一般不写动词，写属性
-    get function 一般是返回值
-    一般没有set方法 ,只读属性
-    computed比methods性能好 会放入内存中 数据修改? 调用:不调用 而methods内次都会调用函数
+- 计算属性
+  在 computed 中定义函数 getFullName: fucntion(){} 和 methods 中不同的是调用不用加()直接写 getFullName
+  取名一般不写动词，写属性
+  get function 一般是返回值
+  一般没有 set 方法 ,只读属性
+  computed 比 methods 性能好 会放入内存中 数据修改? 调用:不调用 而 methods 内次都会调用函数 cha
+- v-for
+  插入数值的时候 绑定 :key 性能好 是直接插入的 而不是 一个个往后赋值
+  绑定的 keyitem 相同
+- 哪些方法是响应式的
+  push
+  pop 删除最后一个元素
+  unshift 加到最前面
+  shift 加到最后面
+  splice() 删除:第一个参数表第几个开始,第二个参数代表删除几个元素/插入/替换 splice(1,3,)

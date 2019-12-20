@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>checkBox</title>
+</head>
+<body>
+    <div id="app">
+        <label for="">
+            <input type="checkbox" id="agree" v-model="isAgree">同意协议
+        </label>
+        <button :disabled="!isAgree">下一步</button>
+        <h2>您选择的是:{{isAgree}}</h2>
+
+        <!-- 多选复选框 -->
+        <label for="">
+            <input type="checkbox" value="篮球" v-model="hobbies">篮球
+            <input type="checkbox" value="LOL" v-model="hobbies">LOL
+            <input type="checkbox" value="足球" v-model="hobbies">足球
+            <input type="checkbox" value="桌球" v-model="hobbies">桌球
+        </label>
+        <h2>你的爱好为:{{hobbies}}</h2>
+    </div>
+    
+</body>
+<script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+<script src='./index.js'></script>
+</html>

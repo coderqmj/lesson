@@ -18,7 +18,7 @@ function 快捷键
   语法糖(简写): v-bind:==: 即可
   属性名: 属性值 不加引号代表是 data 取出的，加‘’代表是他的值
 - 监听事件
-  v-on:click="函数名"
+  v-on:click="函数名" 简写为 @click="函数名"
 - 计算属性
   在 computed 中定义函数 getFullName: fucntion(){} 和 methods 中不同的是调用不用加()直接写 getFullName
   取名一般不写动词，写属性
@@ -35,3 +35,36 @@ function 快捷键
   shift 加到最后面
   splice() 删除:第一个参数表第几个开始,第二个参数代表删除几个元素/插入/替换 splice(1,3,)
 - 过滤器 filters 在这里面写个函数修正小数点保留问题 {{item.price | showPrice}}
+- 过滤函数 let newNums = nums.filter(function(n){ 返回 true 则加入到数组，反之 参数 n 为传来的数组
+  return n<100
+  })
+- map 函数 let newNums1 = newNums.map(function(n){ 返回的值放入新的数组中 参数 n 为传进来的数组
+  return n*2
+  })
+- reduce 对函数进行汇总 let sum = newNums1.reduce(function(previousValuse,n){
+  return previousValuse + n //第一个参数是先前 return 的值(0 为默认第一个 return 的值) n 为传进来的值
+  },0)
+- v-model 双向绑定 与表单一起使用 响应式
+  可以进行双向修改 ，input 修改可以使 data 里面改变
+  event.target.value
+  复选框选中就会将 value值传给data里面 单选框也是
+  失去焦点时才改变，或者回车才改变 v-model.lazy就行了
+- 表单中radio name 一样才能互斥 或者 v-model绑定的一样
+
+- 组件化的使用
+    1.创建组件构造器对象->2.注册组件->3.使用
+    .2.
+  失去焦点时才改变，或者回车才改变 v-model.lazy就行了
+- 表单中radio name 一样才能互斥 或者 v-model绑定的一样
+
+- 组件化的使用
+    1.创建组件构造器对象->2.注册组件->3.使用
+    .2.
+
+  失去焦点时才改变，或者回车才改变 v-model.lazy就行了
+- 表单中radio name 一样才能互斥 或者 v-model绑定的一样
+
+- 组件化的使用
+    1.创建组件构造器对象->2.注册组件->3.使用
+    .2.
+

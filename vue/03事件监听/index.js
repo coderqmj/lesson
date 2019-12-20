@@ -76,11 +76,16 @@ const app = new Vue({
     computed:{
         sumPrice(){
             // return this.books[0].price + this.books[1].price+this.books[2].price+this.books[3].price 当删除某项时就不行 undefined
-            let sumPrice = 0;
-            for(let i =0;i<this.books.length;i++){
-                sumPrice += this.books[i].price;
-            }
-            return sumPrice
+            // let sumPrice = 0;
+            // for(let i in this.books){ //遍历高级写法
+            // // for(let i =0;i<this.books.length;i++){//普通遍历
+            //     sumPrice += this.books[i].price;
+            // }
+            // return sumPrice
+            //高阶函数reduce用法
+            return this.books.reduce(function(pre,book){
+                return pre+book.price
+            },0)
         }
     }
 })

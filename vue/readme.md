@@ -59,12 +59,15 @@ function 快捷键
 
 - 组件化的使用
     1.创建组件构造器对象->2.注册组件->3.使用
-    .2.
+    2.组件化使用 const app 要在组件化定义创建下面才有用
 
-  失去焦点时才改变，或者回车才改变 v-model.lazy就行了
-- 表单中radio name 一样才能互斥 或者 v-model绑定的一样
-
-- 组件化的使用
-    1.创建组件构造器对象->2.注册组件->3.使用
-    .2.
+    
+    3.Vue.component('cpn','cpnC')全局注册 只要是Vue的实例就可以使用app app1等
+    4.局部注册: 在对应的app里components里面注册: cpn:cpnC
+    5.父子组件注册:在父 const cpnC = Vue.extend 下 components:{ cpn1:cpnC1}
+    6.子组件放入父组件必须先定义好
+- 组件内的{{}}
+    1.不可以访问Vue实例的data
+    2.访问数据需要在Vue.component('cpn',{template:'#cpn',data(){return{title:'标题'}}})
+    3.data() 使用函数的时候每次创建都是一个不同的对象，不会共用数据 每次创建都是独立的
 

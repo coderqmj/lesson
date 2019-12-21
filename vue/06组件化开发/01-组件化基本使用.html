@@ -9,8 +9,29 @@
 <body>
     <div id="app">
         <mycpn></mycpn>
+        <mycpn></mycpn>
+        <mycpn></mycpn>
+        <mycpn></mycpn>
     </div>
 </body>
+
 <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
 <script src='./index.js'></script>
+<!-- <script>
+    const cpnC = Vue.extend({
+    template: `
+        <div>
+            <h2>我是标题</h2>
+            <p>我是内容</p>
+        </div>`
+})
+//2.注册组件
+Vue.component('mycpn',cpnC) //取名字 创建的名字
+const app = new Vue({
+    el:'#app',
+    data:{
+
+    }
+})
+</script> -->
 </html>

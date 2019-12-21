@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,body{
+            height: 100%;
+        }
+        .box{
+            width: 280px;
+            height: 400px;
+            position: fixed;/*固定定位*/
+            left: 40%;
+            top: 30%;
+            transform: translate(-50%,-50%); /*唯一自己宽高的一半*/
+            /*三维立体展示*/
+            transform-style: preserve-3d;  /*风格变换*/
+            animation: play 60s linear infinite normal;
+        }
+        .box img{
+            width: 280px;
+            height: 400px;
+            position: absolute; 
+        }
+        .box img:nth-child(1){
+            transform: rotateY(0deg) translateZ(600px); 
+        }
+        .box img:nth-child(2){
+            transform: rotateY(36deg) translateZ(600px);
+        }
+        .box img:nth-child(3){
+            transform: rotateY(72deg) translateZ(600px);
+        }
+        .box img:nth-child(4){
+            transform: rotateY(108deg) translateZ(600px);
+        }
+        .box img:nth-child(5){
+            transform: rotateY(144deg) translateZ(600px);
+        }
+        .box img:nth-child(6){
+            transform: rotateY(180deg) translateZ(600px);
+        }
+        .box img:nth-child(7){
+            transform: rotateY(216deg) translateZ(600px);
+        }
+        .box img:nth-child(8){
+            transform: rotateY(252deg) translateZ(600px);
+        }
+        .box img:nth-child(9){
+            transform: rotateY(288deg) translateZ(600px);
+        }
+        .box img:nth-child(10){
+            transform: rotateY(324deg) translateZ(600px);
+        }
+        /* 定义动画 */
+        @keyframes change {
+            0%{
+                background-color: red;
+            }
+            50%{
+                background-color: orange;
+            }
+            100%{
+                background-color: blue;
+            }
+        }
+        @keyframes play {
+            0%{
+                transform:rotateX(0deg) rotateY(0deg);
+            }
+            25%{
+                transform:rotateX(10deg) rotateY(180deg);
+            }
+            50%{
+                transform:rotateX(0deg) rotateY(360deg);
+            }
+            75%{
+                transform:rotateX(-10deg) rotateY(540deg);
+            }
+            100%{
+                transform:rotateX(0deg) rotateY(720deg);
+            }
+        }
+        button{
+            color: #fff;
+            /* animation: 动画名称 持续时间 速度变化曲线 延迟时间 播放次数 是否反向播放  ; 原型 */
+            animation: change 3s linear 2s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <button>你好</button>
+    <div class="box">
+        <img src="./img/01.jpg" alt="">
+        <img src="./img/02.jpg" alt="">
+        <img src="./img/03.jpg" alt="">
+        <img src="./img/04.jpg" alt="">
+        <img src="./img/05.jpg" alt="">
+        <img src="./img/06.jpg" alt="">
+        <img src="./img/07.jpg" alt="">
+        <img src="./img/08.jpg" alt="">
+        <img src="./img/09.jpg" alt="">
+        <img src="./img/10.jpg" alt="">
+        <audio src="./英雄联盟 - World Championship 2018.mp3" autoplay></audio>
+    </div>
+</body>
+</html>

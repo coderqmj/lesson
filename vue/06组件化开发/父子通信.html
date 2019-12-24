@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>父子通信</title>
+</head>
+<body>
+
+<div id="app">
+    <cpn v-bind:cmovies="movies" :cmessage="message"></cpn>
+</div>
+<template id="cpn">
+    <div >
+        <p>{{cmovies}}</p>
+        <h2>{{cmessage}}</h2>
+    </div>
+</template>
+
+<script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+<script>
+    const cpn = {
+        template:'#cpn',
+        props:['cmovies','cmessage'],
+        data(){
+            return{
+
+            }
+        }
+    }
+    const app = new Vue({
+        el:'#app',
+        data:{
+            movies:['追随','盗梦空间','西游记'],
+            message:'你好啊'
+        },
+        components:{
+            cpn //增强写法 直接注册局部组件
+        }
+    })
+</script>
+<!-- <script src='./index.js'></script> -->
+</body>
+</html>

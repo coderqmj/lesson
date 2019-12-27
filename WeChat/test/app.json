@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/Mustache/Mustache",
     "pages/wxss/wxss",
     "pages/scroll-view/scroll-view",

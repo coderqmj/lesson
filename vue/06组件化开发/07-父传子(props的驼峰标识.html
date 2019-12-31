@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 现版本不支持驼峰式，必须以一下形势才能使用 -->
+        <cpn :cinfo="info" :show-message="message"></cpn>
+    </div>
+    <template id="cpn">
+        <div>
+            <h2>{{cinfo}}</h2>
+            <h2>{{showMessage}}</h2>
+        </div>
+    </template>
+    <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+    <!-- <script src='./index.js'></script> -->
+    <script>
+        const cpn = {
+            template: '#cpn',
+            props: {
+                cinfo: {
+                    type: Object,
+                    default () {
+                        return {}
+                    }
+                },
+                showMessage: {
+                    type: String,
+                    default: '你好啊'
+                }
+            }
+
+        }
+        const app = new Vue({
+            el: "#app",
+            data: {
+                info: {
+                    name: '邱模建',
+                    age: 18,
+                    height: 1.88
+                },
+                message: '你好啊'
+            },
+            components: {
+                cpn
+            }
+
+        })
+    </script>
+</body>
+
+</html>

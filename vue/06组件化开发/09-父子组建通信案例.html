@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 网页显示的是下面的代码运行的结果 -->
+        <cpn :number1="num1" :number2="num2" @num1change="num1change" @num2change="num2change"></cpn>
+        <!-- <cpn :number2="num2"></cpn> -->
+    </div>
+    <template id="cpn">
+        <div>
+            <h1>props:{{number1}}</h1>
+            <h1>data:{{dnumber1}}</h1>
+            <!-- 不应该绑定到props里面 -->
+            <!-- 推荐数据写在data()里面 -->
+            <!-- <input type="text" v-model="dnumber1"> -->
+            <input type="text" v-bind:value="dnumber1" @input="num1Input">
+            <h1>props:{{number2}}</h1>
+            <h1>data:{{dnumber2}}</h1>
+            <!-- <input type="text" v-model="dnumber2"> -->
+            <input type="text" v-bind:value="dnumber2" @input="num2Input">
+        </div>
+    </template>
+    <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                num1: 1,
+                num2: 0
+            },
+            methods: {
+                num1change(value) {
+                    this.num1 = parseInt(value)
+                },
+                num2change(value) {
+                    this.num2 = parseInt(value)
+                }
+            },
+            components: {
+                cpn: {
+                    template: '#cpn',
+                    props: {
+                        number1: Number,
+                        number2: Number
+                    },
+                    data() {
+                        return {
+                            dnumber1: this.number1,
+                            dnumber2: this.number2
+                        }
+                    },
+                    methods: {
+                        num1Input(event) {
+                            this.dnumber1 = event.target.value;
+                            this.$emit('num1change', this.dnumber1)
+                        },
+                        num2Input(event) {
+                            this.dnumber2 = event.target.value;
+                            this.$emit('num2change', this.dnumber2)
+                        }
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <cpn ref="aaa"></cpn>
+        <button @click="btnClick">按钮</button>
+    </div>
+    <template id="cpn">
+        <div>
+            <h1>我是子组件</h1>
+        </div>
+    </template>
+    <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+    <!-- <script src='./index.js'></script> -->
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+
+            },
+            components: {
+                cpn: {
+                    template: '#cpn',
+                    methods: {
+                        showMessage() {
+                            console.log('showMessage');
+                        }
+                    },
+                    data() {
+                        return {
+                            name: '子组件的name'
+                        }
+                    }
+                }
+            },
+            methods: {
+                btnClick() {
+                    // $children获取方式
+                    // console.log(this.$children);
+                    // this.$children[0].showMessage();
+                    // console.log(this.$children[0].name)
+                    // for (let c of this.$children) {
+                    //     console.log(c.name);
+                    //     c.showMessage();
+                    // }
+                    // 2.$refs引用方式
+                    // 配合在 <cpn ref="aaa"><cpn> 使用
+                    console.log(this.$refs.aaa.name);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

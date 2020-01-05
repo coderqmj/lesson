@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <cpn><button>按钮</button></cpn>
+        <cpn>
+            <h2>你好啊啊</h2>
+        </cpn>
+        <cpn>
+            <p>哈哈哈</p>
+        </cpn>
+        <cpn></cpn>
+    </div>
+    <template id="cpn">
+        <div>
+            <h2>我是子组件</h2>
+            <p>我是组件</p>
+            <slot></slot>
+        </div>
+    </template>
+    <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+    <!-- <script src='./index.js'></script> -->
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: '你好啊'
+            },
+            components: {
+                cpn: {
+                    template: '#cpn',
+                    methods: {
+                        btnClick() {
+                            console.log(this.$root.message);
+                        }
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

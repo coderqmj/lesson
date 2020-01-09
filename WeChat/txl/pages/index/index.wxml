@@ -1,0 +1,16 @@
+<view class="container log-list">
+  <!-- 滚动看歌手 -->
+  <scroll-view scroll-y style="height:100%;white-space:nowrap;" enable-back-to-top bindscroll="scroll" scroll-with-animation scroll-top="{{scrollTop}}">
+    <view class="list-group" wx:for="{{logs}}" wx:for-item="group">
+      <!-- A-Z -->
+      <view class="title" id="{{group.title}}">{{group.title}}</view>
+      <block wx:for="{{group.items}}" wx:for-item="user">
+        <view class="list-group-item">
+          <image class="icon" src="{{user.avatar}}" lazy-load="true"></image>
+          <text class="log-item">{{user.name}}</text>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+  <view class="list-shortcut"></view>
+</view>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- data从实例化里面查找 -->
+        <cpn v-show="isShow">
+        </cpn>
+    </div>
+    <template id="cpn">
+        <div>
+            <!-- data是从组件里面查找 -->
+            <h1 v-show="isShow">我是标题</h1> 
+            <p>我是内容</p>
+        </div>
+    </template>
+    <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+    <!-- <script src='./index.js'></script> -->
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: '你好啊',
+                isShow: true
+            },
+            components: {
+                cpn: {
+                    template: '#cpn',
+                    data() {
+                        return {
+                            isShow: false
+                        }
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

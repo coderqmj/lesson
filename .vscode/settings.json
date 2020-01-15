@@ -29,6 +29,7 @@
 
 // Use default images.使用默认图片
 "background.useDefault": false,
+"git.ignoreLimitWarning": true,
 
     
 }

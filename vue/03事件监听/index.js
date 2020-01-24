@@ -11,21 +11,21 @@ const app = new Vue({
     //     }
     // }
     data: {
-        books: [
-            {
+        books: [{
                 id: 1,
                 name: '《算法导论》',
                 date: '2006-9',
                 price: 85.00,
-                signlePrice:85.00,
-                count: 1
+                signlePrice: 85.00,
+                count: 1,
+                name: qmj
             },
             {
                 id: 2,
                 name: '《西游记》',
                 date: '2007-9',
                 price: 65.00,
-                signlePrice:65.00,
+                signlePrice: 65.00,
                 count: 1
             },
             {
@@ -33,7 +33,7 @@ const app = new Vue({
                 name: '《三国》',
                 date: '2008-9',
                 price: 75.00,
-                signlePrice:75.00,
+                signlePrice: 75.00,
                 count: 1
             },
             {
@@ -41,7 +41,7 @@ const app = new Vue({
                 name: '《梦的解析》',
                 date: '2009-9',
                 price: 65.00,
-                signlePrice:65.00,
+                signlePrice: 65.00,
                 count: 1
             }
         ]
@@ -51,21 +51,21 @@ const app = new Vue({
             return '￥' + price.toFixed(2)
         },
         min(index) {
-            if (this.books[index].count > 1){
+            if (this.books[index].count > 1) {
                 this.books[index].count--
-            // console.log("惦记了减少");
-            }else{
+                    // console.log("惦记了减少");
+            } else {
                 this.books[index].count = 1
             }
-            this.books[index].price = this.books[index].signlePrice*this.books[index].count
+            this.books[index].price = this.books[index].signlePrice * this.books[index].count
         },
         add(index) {
             this.books[index].count++
-            this.books[index].price = this.books[index].signlePrice*this.books[index].count
-            // console.log("加");
+                this.books[index].price = this.books[index].signlePrice * this.books[index].count
+                // console.log("加");
         },
-        reMove(index){
-            this.books.splice(index,1)
+        reMove(index) {
+            this.books.splice(index, 1)
         }
     },
     filters: {
@@ -73,8 +73,8 @@ const app = new Vue({
             return '￥' + price.toFixed(2)
         }
     },
-    computed:{
-        sumPrice(){
+    computed: {
+        sumPrice() {
             // return this.books[0].price + this.books[1].price+this.books[2].price+this.books[3].price 当删除某项时就不行 undefined
             // let sumPrice = 0;
             // for(let i in this.books){ //遍历高级写法
@@ -83,9 +83,9 @@ const app = new Vue({
             // }
             // return sumPrice
             //高阶函数reduce用法
-            return this.books.reduce(function(pre,book){
-                return pre+book.price
-            },0)
+            return this.books.reduce(function(pre, book) {
+                return pre + book.price
+            }, 0)
         }
     }
 })

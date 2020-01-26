@@ -1,8 +1,17 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '../components/Home.vue'
-import About from '../components/About.vue'
-import Users from '../components/Users.vue'
+
+// import Home from '../components/Home.vue'
+// import About from '../components/About.vue'
+// import Users from '../components/Users.vue'
+
+const Home = () =>
+    import ('../components/Home.vue')
+const About = () =>
+    import ('../components/About.vue')
+const Users = () =>
+    import ('../components/Users.vue')
+
 
 Vue.use(Router)
 

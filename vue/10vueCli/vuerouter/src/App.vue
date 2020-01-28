@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <!-- <router-view></router-view> -->
     <router-link to ='/home' tag="button" replace>首页</router-link>
     <router-link to ='/about' tag="button" replace>关于</router-link>
     <!-- <router-link :to="'/user/'+userId" tag="button" replace>用户</router-link>
@@ -9,6 +9,9 @@
     <button @click="profileClick">档案</button>
     <!-- <router-link to ='/profile' tag='button' replace >档案</router-link> 普通写法 -->
     <!-- <img :src="imgUrl" alt=""> -->
+    <keep-alive exclude="Profile">
+      <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
 

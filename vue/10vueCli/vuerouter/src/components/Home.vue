@@ -10,7 +10,23 @@
 
 <script>
 export default {
-  name: 'Home'
+  name: 'Home',
+  // created(){
+  //   document.title='首页'
+  //   // console.log("object");
+  // }
+  data(){
+    return{
+      path:'/home/news'
+    }
+  },
+  activated(){
+    this.$router.push(this.path)
+  },
+  beforeRouteLeave(to,from,next){
+    this.path = this.$route.path
+    next()
+  }
 }
 </script>
 

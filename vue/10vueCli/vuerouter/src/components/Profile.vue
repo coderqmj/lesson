@@ -7,7 +7,11 @@
 
 <script>
 export default {
-
+  name:'Profile'
+  // created(){
+  //   document.title='档案'
+  //   // console.log("object");
+  // }
 }
 </script>
 

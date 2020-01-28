@@ -17,6 +17,10 @@ export default {
       
     };
   },
+  // created(){
+  //   document.title='消息'
+  //   // console.log("object");
+  // },
   components: {},
   mounted () {},
   methods: {}

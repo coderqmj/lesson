@@ -12,7 +12,11 @@ export default {
         userId(){
             return this.$route.params.userId
         }
-    }
+    },
+//     created(){
+//     document.title='用户'
+//     // console.log("object");
+//   }
     
 }
 </script>

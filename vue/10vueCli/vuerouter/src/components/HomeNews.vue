@@ -17,6 +17,10 @@ export default {
       
     };
   },
+  // created(){
+  //   document.title='新闻'
+  //   // console.log("object");
+  // },
   components: {},
   mounted () {},
   methods: {}

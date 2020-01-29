@@ -1,12 +1,20 @@
 <template>
   <div id="tab-bar">
-    <slot></slot> 
-  </div>    
+      <slot></slot>
+  </div>
 </template>
 
 <script>
 export default {
-    name:'TabBar'
+  name: 'TabBar',
+  data () {
+    return {
+      
+    };
+  },
+  components: {},
+  mounted () {},
+  methods: {}
 }
 </script>
 
@@ -19,9 +27,8 @@ export default {
     bottom: 0;
     left: 0;
     right: 0;
+    /* height: 49px; */
 
-    box-shadow: 0 -3px 1px rgba(100, 100, 100, .1)
+    box-shadow: 0 -3px 1px rgba(100, 100, 100, .1);
   }
-  
-  
 </style>

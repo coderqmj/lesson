@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    new Promise((resolve) => {
+      setTimeout(() => {
+        resolve('aaa')
+      }, 1000)
+    }).then(data => {
+      console.log(data, '第一次处理');
+      return data + '111'
+    }).then(data => {
+      console.log(data, '第二次处理');
+
+      return data + '222'
+    }).then(data => {
+      console.log(data, '第三次处理');
+    })
+  </script>
+</body>
+
+</html>

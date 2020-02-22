@@ -18,11 +18,46 @@
 // var a; console.log(a);a = null;console.log(a);
 
 //关于对象
-var a = {age:12}
-b = a
-a = {age:13,name:'qiu'}
-function foo (a){
- return a={age:18}
+// var a = {age:12}
+// b = a
+// a = {age:13,name:'qiu'}
+// function foo (a){
+//  return a={age:18}
+// }
+// foo(b)
+// console.log(b.age);
+
+//值传递还是引用传递
+// var a =3
+// function foo (a){
+//   a= a +1
+//   console.log(a);
+// }
+// foo(a)
+// console.log(a);
+
+//obj['属性名']的使用
+// var obj = {
+//   'content-type':'text/json',
+//   abc:123
+// }
+// console.log(obj[bc]);
+
+//call/apply调用函数
+// var obj = {}
+// function foo (){
+//   this.name = 'qiu'
+// }
+// foo.call(obj)
+// console.log(obj);
+// console.log(obj.name);  //qiu
+
+function foo(){
 }
-foo(b)
-console.log(b.age);
+foo.prototype.test = function(){
+  console.log('test()');
+}
+var a = new foo()
+// console.log(foo.prototype,a.__proto__)
+// console.log(test);
+console.log(foo.prototype === a.__proto__);

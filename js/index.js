@@ -60,4 +60,6 @@ foo.prototype.test = function(){
 var a = new foo()
 // console.log(foo.prototype,a.__proto__)
 // console.log(test);
-console.log(foo.prototype === a.__proto__);
+// console.log(foo.prototype === a.__proto__);
+// console.log(foo.prototype instanceof Object);
+console.log(Object.prototype);

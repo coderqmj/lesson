@@ -1,9 +1,9 @@
-import TodoList from './TodoList'
+import TodoInput from './TodoInput'
 import TodoItem from './TodoItem'
 import Header from './Header'
 
 export {
-  TodoList,
+  TodoInput,
   TodoItem,
   Header
 }

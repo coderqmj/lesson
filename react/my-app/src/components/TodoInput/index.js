@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import propTypes from 'prop-types'
 
-export default class TodoList extends Component {
+export default class TodoInput extends Component {
   static defaultProps = {
     btnText:'添加'
   }

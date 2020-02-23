@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {TodoList,TodoItem,Header} from './components'
+import {TodoInput,TodoItem,Header} from './components'
 
 export default class App extends Component {
   constructor(){
@@ -12,11 +12,13 @@ export default class App extends Component {
          {
            id:1,
            title:'吃饭',
+           whio:'qiu',
            isCompleted:true
          },
          {
            id:2,
            title:'睡觉',
+           who:'mo',
            isCompleted:false
          }
        ]
@@ -28,7 +30,7 @@ export default class App extends Component {
         <Header desc={this.state.desc}>
           <i>{this.state.title}</i>
         </Header>  
-        <TodoList />
+        <TodoInput />
         <TodoItem todos={this.state.todos} /> 
         {/* {
           this.state.todos.map(todo=>{

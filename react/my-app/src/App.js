@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {TodoInput,TodoItem,Header} from './components'
+import {TodoInput,TodoItem,Header,Like} from './components'
 
 export default class App extends Component {
   constructor(){
@@ -12,17 +12,27 @@ export default class App extends Component {
          {
            id:1,
            title:'吃饭',
-           whio:'qiu',
+          //  whio:'qiu',
            isCompleted:true
          },
          {
            id:2,
            title:'睡觉',
-           who:'mo',
+          //  who:'mo',
            isCompleted:false
          }
        ]
      }
+  }
+  addTodo= (todoItem)=>{
+    // console.log(todoItem);
+    this.setState({
+      todos:this.state.todos.concat({
+        id:Math.random(),
+        title:todoItem,
+        isCompleted:false
+      })
+    })
   }
   render() {
     return (
@@ -30,8 +40,11 @@ export default class App extends Component {
         <Header desc={this.state.desc}>
           <i>{this.state.title}</i>
         </Header>  
-        <TodoInput />
+        <TodoInput
+          addTodo={this.addTodo}
+        />
         <TodoItem todos={this.state.todos} /> 
+        <Like/>
         {/* {
           this.state.todos.map(todo=>{
           return <div key={todo.id}>{todo.title}</div>

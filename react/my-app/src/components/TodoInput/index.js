@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, createRef } from 'react'
 import propTypes from 'prop-types'
 
 export default class TodoInput extends Component {
@@ -13,6 +13,7 @@ export default class TodoInput extends Component {
     this.state={
       inputValue:''
     }
+    this.inputDom = createRef()
   }
   handleInputChange = (event) =>{
     // console.log(event.currentTarget.value);
@@ -20,9 +21,21 @@ export default class TodoInput extends Component {
       inputValue:event.currentTarget.value
     })
   }
+  handleKeyUp = (event)=>{
+    if(event.keyCode===13){
+      console.log('nihao');
+      this.handleClick()  
+    }
+  }
   handleClick = () =>{
-      // console.log(this.state);
+    if(this.state.inputValue){
       this.props.addTodo(this.state.inputValue)
+      this.setState({
+        inputValue:''
+      },()=>{
+        this.inputDom.current.focus()
+      })
+    }  
   }
   render() {
     return (
@@ -31,7 +44,8 @@ export default class TodoInput extends Component {
           type="text"
           value={this.state.inputValue}
           onChange={this.handleInputChange}
-          onKeyUp={this.handleClick}
+          onKeyUp={this.handleKeyUp}
+          ref={this.inputDom}
         />
         <button onClick={this.handleClick}>{this.props.btnText}</button>
       </div>

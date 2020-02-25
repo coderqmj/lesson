@@ -52,14 +52,18 @@
 // console.log(obj);
 // console.log(obj.name);  //qiu
 
-function foo(){
-}
-foo.prototype.test = function(){
-  console.log('test()');
-}
-var a = new foo()
+// function foo(){
+// }
+// foo.prototype.test = function(){
+//   console.log('test()');
+// }
+// var a = new foo()
 // console.log(foo.prototype,a.__proto__)
 // console.log(test);
 // console.log(foo.prototype === a.__proto__);
 // console.log(foo.prototype instanceof Object);
-console.log(Object.prototype);
+// console.log(Object.prototype);
+
+//两个>>和>>>都是向下取整
+// console.log(8.225555 >>> 0);
+console.log(2.222 > 0);

@@ -1,4 +1,4 @@
-// var a
+{// var a
 // console.log(a,typeof (a) ,typeof a === 'undefined',a==='undefined');
 // a = 3
 // console.log(typeof a ==='Number',typeof a ==='number' );
@@ -66,4 +66,42 @@
 
 //两个>>和>>>都是向下取整
 // console.log(8.225555 >>> 0);
-console.log(2.222 > 0);
+// console.log(2.222 > 0);
+
+// var f1=new Function()
+// console.log(Object instanceof f1 );
+// function A(){
+
+// }
+// A.prototype.n=1
+// var b = new A()
+// A.prototype = {
+//   n:2,
+//   m:3
+// }
+// var c = new A()
+// console.log(b,c);
+}
+
+//变量提升与函数提升
+// console.log(a);
+// let a =3;
+// (function b(){
+//   console.log(a);
+//   let a = 4
+// })()
+// foo()
+
+// var foo = function(){
+//   console.log('foo()');
+// }
+
+function a(a1, a2) {
+  console.log(this);
+  console.log(arguments);
+}
+var obj ={
+  m:1,
+  n:2
+}
+a.call(obj,1,2)

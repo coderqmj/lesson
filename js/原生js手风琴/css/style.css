@@ -1,0 +1,24 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body{
+  width: 1200px;
+  height: 400px;
+  margin: 60px auto;
+  border:2px solid blue;
+  /* overflow: hidden; */
+}
+.box ul {
+  background-color: #eee;
+  overflow: hidden;
+}
+.box li{
+  height: 400px;
+  width: 240px;
+  float: left;
+  background-size: 800px 400px;
+  background-repeat: no-repeat;
+  transition: all 0.3s linear;
+}

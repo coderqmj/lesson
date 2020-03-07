@@ -96,12 +96,19 @@
 //   console.log('foo()');
 // }
 
-function a(a1, a2) {
-  console.log(this);
-  console.log(arguments);
-}
-var obj ={
-  m:1,
-  n:2
-}
-a.call(obj,1,2)
+// function a(a1, a2) {
+//   console.log(this);
+//   console.log(arguments);
+// }
+// var obj ={
+//   m:1,
+//   n:2
+// }
+// a.call(obj,1,2)
+var run = setInterval(() => {
+  // var i = Math.floor(Math.random() * 4);
+  // this.food = this.foods[i];
+  console.log('开始');
+}, 250);
+
+clearInterval(run)

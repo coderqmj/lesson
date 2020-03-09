@@ -1,0 +1,6 @@
+<view class="top"></view>
+<view class="all">
+  <view class="food">今天中午吃{{food}}?</view>
+  <view class="text">解决世纪难题!今天中午吃什么!</view>
+  <view class="btn" bindtap="changeFood">{{content}}</view>
+</view>

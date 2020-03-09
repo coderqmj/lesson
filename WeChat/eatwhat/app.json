@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/index/index"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "中午吃什么？",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

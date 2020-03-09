@@ -1,0 +1,31 @@
+.btn {
+  background-color: orange;
+  text-align: center;
+  margin: 0 auto;
+  color: #fff;
+  opacity: 1;
+  line-height: 40px;
+  width: 180px;
+  height: 50px;
+  font-size: 20px;
+
+  border-radius: 10px;
+}
+
+.text {
+  text-align: center;
+  margin-top: 2px;
+}
+
+.food {
+  text-align: center;
+  /* margin-top: 35vh; */
+}
+.all{
+  height: 65vh;
+  background-color:#dfe6e9;
+}
+.top{
+  background-color:#dfe6e9;
+  height: 35vh;
+}

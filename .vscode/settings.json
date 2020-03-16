@@ -1,4 +1,14 @@
 {
   "editor.tabSize": 2,
-  "editor.detectIndentation": false
+  "editor.detectIndentation": false,
+
+
+  // 以下是新加入
+  "emmet.syntaxProfiles":{
+    "vue-html": "html",
+    "vue": "html"
+},
+"files.associations": {
+    "*.vue": "html"
+}
 }

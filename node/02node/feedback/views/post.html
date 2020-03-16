@@ -10,21 +10,31 @@
 
 <body>
   <div class="header container">
-    <h1><a href="html">回到首页</a> <small>subtext</small> </h1>
+    <h1 class="aa"><a href="html">首页</a> </h1><p>发表留言</p>
   </div>
-
+  <hr>
   <div class="comments container">
-    <form action="">
+    <form action="comment" method="GET">
       <div class="form-group">
-        <label for="exampleFormControlInput1">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <label for="inputName">姓名</label>
+        <input type="text" 
+               class="form-control" 
+               id="inputName" 
+               name="name"
+               required minlength="2" maxlength="10"
+               placeholder="输入你的用户名">
       </div>
       <div class="form-group">
-        <label for="exampleFormControlTextarea1">Example textarea</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <label for="textareaContent">留言</label>
+        <textarea class="form-control" 
+                  id="textareaContent" 
+                  rows="3" 
+                  name="content"
+                  required minlength="5" maxlength="20"
+                  placeholder="说点什么吧..."></textarea>
       </div>
+      <button type="submit" class="btn btn-primary" >提交</button>
     </form>
   </div>
 </body>
-
 </html>

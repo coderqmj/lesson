@@ -10,17 +10,17 @@
 
 <body>
   <div class="header container">
+    <h1>留言板 <span class="badge badge-secondary"></span></h1>
     <div class="page-header">
       <a class="btn btn-primary" href="post" role="button">发表留言</a>
     </div>
   </div>
+  <hr>
   <div class="comments container">
     <ul class="list-group">
-      <li class="list-group-item">Cras justo odio</li>
-      <li class="list-group-item">Dapibus ac facilisis in</li>
-      <li class="list-group-item">Morbi leo risus</li>
-      <li class="list-group-item">Porta ac consectetur ac</li>
-      <li class="list-group-item">Vestibulum at eros</li>
+      {{each comments}}
+      <li class="list-group-item">{{$value.name}}说:{{$value.content}} <span class="float-right">{{$value.time}}</span></li>
+      {{/each}}
     </ul>
   </div>
 

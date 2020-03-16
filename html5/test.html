@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript"> 
+function copyLink(){
+var e = document.getElementById("copy");
+e.select(); // 选择对象
+document.execCommand("Copy"); // 执行浏览器复制命令
+alert("复制链接成功！");
+}
+</script>
+</head>
+<body>
+<textarea id="copy">复制链接成功</textarea>
+<input type="button" οnclick="copyLink();" value="点击复制"></input>
+</body>
+</html>

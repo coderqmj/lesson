@@ -11,8 +11,12 @@
     <div class="item item2">item2</div>
     <div class="item item3">item3</div>
     <div class="item item4">item4</div>
+    <div class="item item1">item5</div>
+    <div class="item item2">item6</div>
+    <div class="item item3">item7</div>
+    <div class="item item4">item8</div>
   </div>
-  <strong>strong 是行内元素 可以和别人在同一行显示 </strong>
+  <!-- <strong>strong 是行内元素 可以和别人在同一行显示 </strong> -->
 </body>
 <style>
   .box{
@@ -26,9 +30,17 @@
     width: 500px;
     height: 400px;
     background-color: orange;
+    margin: 0 auto;
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* justify-content: space-evenly; */
+    flex-wrap: wrap;
+    /* align-content: center; */
+    align-content: flex-start;
   }
   .item{
-    width: 100px;
+    width: 20%;
     /* flex: 1; */
     height: 100px;
     text-align: center;

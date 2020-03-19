@@ -219,7 +219,7 @@ export default {
 }
 
 .box:hover {
-  transform: scale(0.95);
+  transform: scale(0.97);
 }
 .copy {
   height: 50px;

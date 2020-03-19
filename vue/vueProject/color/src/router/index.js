@@ -14,14 +14,17 @@ Vue.use(Router)
 const routes = [
   {
     path: '',
-    redirect: '/home'
+    redirect: '/home',
+    meta:{index:0}
   },
   {
     path: '/home',
+    meta:{index:0},
     component: Home
   },
   {
     path: '/color',
+    meta:{index:1},
     component: Color
   }
 ]

@@ -9,3 +9,7 @@ new Vue({
   render: h => h(App),
   router
 }).$mount('#app')
+
+// window.addEventListener('popstate',function(e){
+//   router.isBack = true
+// },true)
